@@ -44,7 +44,7 @@ python --version
 ### **Step 2: Navigate to the Project Directory**
 Open your terminal (or Command Prompt) and navigate to the project folder where `app.py` is located.
 ```bash
-cd /Users/tanapornsuesakul/Documents/anti_project/ir_term_project
+cd /your_project
 ```
 
 ### **Step 3: Install Required Dependencies**
