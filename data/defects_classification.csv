@@ -1,0 +1,519 @@
+Title,Issue found,Step to reproduce,Actual result,Expected result,Severity,IEEE_Type,IEEE_Mode,IEEE_Insertion_Activity,IEEE_Effect,Reason/Recommendation,,
+QR 360 แอพสแกนไปข้อมูลคนอื่น,QR 360 แอพสแกนไปข้อมูลคนอื่น,QR360 หากใช้มือถือสแกนจากเมนูเครื่องทั่วไปจะไปฟอร์มที่ถูกต้อง แต่หากใช้แอพของถาบันนั้นสแกน จะไปที่หน้าข้อมูลฟอร์มของคนอื่น,เห็นคำตอบฟอร์มของคนอื่น,สแกนด้วยแอพสถาบันนั้นหรือด้วยเมนูเครื่องควรไปฟอร์มที่ถูกต้องเดียวกัน,Critical,Data,Wrong,Coding,Security,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Security",,
+General: Conference time - part 3,Conference page shows incorrect time,ต่อจาก พาท1&2 - (Teacher role) หากออกมาที่หน้ารวม Conference ด้านนอก จะพบรายการ Conference ทั้งหมด ซึ่งแสดงวัน-เวลาผิดปกติ (ตามภาพในลิ่งค์ ggdrive),แสดงวัน-เวลาผิด ในหน้ารวม(Teacher role) ในขณะที่หากนักเรียนไม่ได้ถูก Add by creator จะมองไม่เห็น Conference ดังกล่าว และไม่มีอีเมลแจ้ง conference เข้า (นอกจาก Creator ทำการ Add จึงได้รับ mail),หน้ารวมของเมนู Conference ควรแสดงเวลาที่ถูกต้อง และ อาจต้องตรวจสอบหลังแก้ไขว่า mail ทำงานปกติถูกต้อง (ได้รับ mail ปกติ),Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+Lost pre-requisite form,DOP3 POCUS ไม่มี pre-requisite ให้เด็กทำ,ใช้ Student role สร้าง log/ form DOP3 POCUS จะพบว่าไม่มีให้ทำ pre-requisite,teachear role ตอนตรวจจะพบ แนบ pre-requisite แต่เด็กไม่เห็นจึงทำไม่ได้,ตอนแนบ DOP3 POCUS ต้องขึ้น pre-requisite ให้เลือก และพอกดส่งต้อง navigate ไปทำ self reflection form ทันที,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+General: Student do not have notification when receive self reflection form,อาจารย์ส่ง form ที่มี pre-requisite ให้แต่นร.ไม่รู้,Teacher role กดสร้าง form ที่มี pre requisite ส่งให้ นร. เมื่อสลับ account มาที่ Student จะไม่ได้รับ notification เตือนว่ามี self reflection ต้องเข้าไปทำ,นร. ไม่รู้ว่ามี self reflection form ส่งมา,ควรมีการเตือนที่ mailbox ว่ามี self teflection form รอให้ทำ,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+ปัญหา Pre-requisite,Pre-requisite เมื่อแนบเสร็จจะ Error,สร้างฟอร์มที่มี pre-requisite > submit form,form pre-requisiteเมื่อกดส่งจะขึ้น something went wrong ไม่พาไปทำ pre-requisite ให้ออโต้,Pre-requisite form พาไปทำทันทีที่ส่งฟอร์มและสามารถใช้งานได้ไม่ error,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+QR scanner ไม่ทำงาน,QR scanner ไม่ทำงาน,Click menu Procedure( or Patient care or Form) > Click QR Scanner ที่มุมขวาบนหน้าจอ,ไม่ตอบสนองใดๆ,,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+Export ดึงข้อมูลผิด,หาก Export conference แบบระบุช่วงเวลานึง 1. ข้อมูลจำนวนสัมมนา หรือ 2.จำนวนคนเข้าร่วมที่ได้ออกมา จะไม่ใช่ในช่วงเวลาดังกล่าว แต่เป็นข้อมูล sum ทั้งหมดของระบบในหัวข้อนั้นๆ,,ได้ค่าตัวเลข export ของข้อมูลทั้งหมด ไม่ใช่ช่วงเวลาที่ระบุ,ได้ค่าเฉพาะช่วงเวลาที่ระบุ เช่น - conference_attendance_count ได้เฉพาะช่วงเวลาที่ระบุ ไม่ใช่แสดงข้อมูลทั้งหมดบนระบบ - conference_count ได้เฉพาะช่วงเวลาที่ระบุ ไม่ใช่แสดงข้อมูลทั้งหมดบนระบบ,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+หน้า Procedure log/Form ทุกๆรายการlog/formไม่ตอบสนองในการคลิก,หน้า Procedure log/Form ทุกๆรายการlog/formไม่ตอบสนองในการคลิก,click menu procedure log > click any log (Form ด้วย),นิ่ง ไม่ตอบสนองใดๆ ไม่สามารถแก้ไขหรือดูlogได้,,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+Frontend แสดง Satisfaction ผิด,"- Edit Procedure log, Field satisfaction",สร้าง log แล้วเลือก satiafaction = 5,ระบบจะแสดงเป็น terrible ทั้งที่จริง ๆ คือ great,,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+form เบิ้ล - part 2,Teacher ส่ง form ให้นร. เบิ้ล,Teacher role กดส่ง form ให้นร. เมื่อเปลี่ยนไปเข้า account Student จะพบ form เบิ้ล,,,Major,Logic,Extra,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Extra, Effect=Functionality",,
+Form wizard ใส่ qcode ไปแล้ว ไม่ update,"form wizard,1. ใส่ form wizard qcode",ui แสดงว่า qcode ยังไม่ได้ใส่,warnning ว่าไม่ใส่ qcode ควรหารไป,,Major,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+Patient care mail(in appnotification) not delivered,Not get mail,ให้นักเรียนส่ง patient care และเช็คจากแอคเค้าอาจารย์ อาจารย์จะไม่ได้รับ mail patient care submitted,ไม่ได้รับ mail,หากเด็กส่ง patient care มาควรขึ้นในเมลอาจารย์,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+Procedure Log → View All แสดงผลผิดพลาด,Role: Student Menu: Procedure log,1. ไปที่หน้า procedure log 2. กด View All 3. กดเข้าไปดู detail ของการ์ด procedure,ระบบแสดงผลในกล่อง total approve ผิดพลาด และไม่แสดง procedure list,ระบบควรแสดงข้อมูลถูกต้องเหมือน procduction อื่น,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+แอพบึ้ม ในหน้า procedurelog กด Multi select แล้ว filter วันที่💣 💥,filter วันที่ >> App crash,ไปหน้า procedurelog กด multi select for approve แล้วทำการ filter ด้วยวันที่,แอพบึ้ม,,Critical,Interface,Wrong,Coding,Performance,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Performance",,
+API search_procedure ไม่ return จำนวน done ของ log type ที่ไม่มี min require,api search_procedure ไม่ return done ของ log type อื่นมานอกจาก operator มาให้ถ้าไม่มีจำนวน min require,1. ลองส่ง procedure log ด้วย log type ที่ไม่มี min require 2. ลองใช้ api,log type ที่ไม่มี min require จะไม่นับจำนวน done ให้,,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+General: Conference time - part 4,Conference mail in inbox,ต่อจากข้อ 1-3 (Teacher role) หากเช็ค mail เวลา conference ที่แสดงจะผิด เป็น GMT+2 (กรณีสร้างผิด) +1(กรณีสร้างถูก),แสดงเวลาconference เป็น GMT +2/+1 ใน mailbox,GMT + 7,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+รูปภาพไม่พรีวิว,รูปภาพที่แนบไม่แสดงตัวอย่าง,กดสร้างlogใหม่ > แนบไฟล์ภาพ,ไม่แสดงภาพตัวอย่างของไฟล์ที่แนบไป,มีพรีวิวthumbnail attached image,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Mobile ปิด Drawer ของ Dashboard: Evaluation Form Completion ไม่ได้,Dashboard: Evaluation Form Completion,1. เปิด Dashboard ผ่าน mobile 2. กดเข้าไปดู Result ของที่นักเรียนส่ง 3. กดปุ่ม view form (ใต้ชื่อนักเรียน),เมื่อกด view form แล้วปุ่มปิด drawer หาย user ต้องกด back กลับไปที่หน้า profile เพื่อออกจากหน้า Dashboard,- แก้ไข drawer(ย่อความสูงลง) - ปรับปรุงให้แสดงผลในหน้า web view ได้ดีกว่านี้,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Add ScrollView on Note from Teacher,Student Procedure log details,1.ไปที่ procedure log details 2.ดูที่ Note from teacher,ไม่สามารถเลื่อนอ่าน comment ทั้งหมดจากอาจารย์ได้,,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+ไม่ได้ผูก Form ที่ส่งมาพร้อมกับ Procedure log,/procedure/detail > Related Form List,1. ไปที่ Procedure Log 2. ดู Log ที่เคยมีการแนบ form ด้วยจากระบบเก่า,ระบบไม่แสดง form ที่แนบมากับ procedure log,ระบบควรจะแสดง form ที่แนบมากับ procedure log,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+กล่องจดหมายไม่ตอบสนอง,กล่องจดหมายไม่ตอบสนอง,คลิกกล่องจดหมาย > คลิกเลือกรายการใดๆในกล่องจดหมาย,ไม่ตอบสนองใดๆ,,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+Sorting conference card,Conference,1.เข้า web ด้วย role teacher/admin 2.ไปที่ menu Conference,Filter ไปที่ host กับ creator จะพบว่า conference เรียง starttime จาก วันที่เก่า → วันที่ล่าสุด,แก้ไข param order_by จาก ที่ส่ง starttime อย่างเดียวให้เพิ่ม DESC ไปด้วย,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+Logbook api stat cannot handle string procedure_group_code,dashboard logbook,1. add procedure group as a string like ~ ‘Nerasing’ 2. call api logbook_statistic 3.return 500,should return data,,Major,Data,Wrong,Coding,Performance,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Performance",,
+Menu กดไม่ได้,เมนู กราฟของฉัน และ ความสำเร็จของฉัน กดไม่ได้,เข้าหน้าโปรไฟล์ > คลิก กราฟของฉัน หรือ ความสำเร็จของฉัน,ไม่สามารถคลิกเมนู กราฟของฉัน และ ความสำเร็จของฉัน ได้ ไม่ตอบสนอง,ใช้งานเมนูได้ปกติ,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+General: Conference time - part 2,Edit conference issue,ต่อจากพาท 1 (Teacher role) หากทำการกดปุ่ม edit โดยที่ยังไม่แก้ไขอะไร จะพบว่า Conference time จะถูกจัดเรียงใหม่เอง โดย เวลาจบ มากลายเป็น เวลาเริ่มกิจกรรมแทน // แต่ส่วนของเวลา เช็คอิน เช็คเอ้าท์ จะยังคงผิด และกด save //,เวลาก็จะยังแสดงค่า conference time ผิด (ต่างกับในหน้า edit ที่เห็นการสลับตำแหน่ง) และเครดิตยัง ติดลบ(บนios) หรือเป็น 0 (บน Android),ข้อมูลหน้า edit ควรมีการสร้าง condition ที่ตรงกับหน้าสรุปกิจกรรม และหน้าตอนสร้างกิจกรรม ไม่ควรเกิดการสลับตำแหน่งเองได้,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+Dashboard > view form ไม่ครบ,Dashboard แสดงข้อมูลไม่ครบ,1. เลือกเมนูแดชบอร์ด 2. เลื่อนมาบริเวณ Evaluation form completion 3. filter & search ข้อมูล 4. กดขยายผลลัพธ์ออกมาดูจะพบปุ่ม viewform 5. หากมีมากกว่า 10รายการ ก็จะพบแค่ 10รายการ max,แสดงแค่10รายการ,ควรแสดงครบทุกรายการ,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+General: Comment text invisible in Android dark mode,Comment box in procedure scence of teacher,1. set android to dark mode 2. try to comment procedure in procedure comment box,text cannot be seen,text should be able to seen,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+form ซ้ำ - Part 1,form ซ้ำ 2-4อันต่อการกด1ครั้ง,Student กดส่งform ชนิดต่างๆ และแชร์ลิ้งค์ จะได้ลิ้งค์ที่ต่างกัน,ขึ้นซ้ำ 2-4 อัน แต่หากมีการตอบ1อัน จะตอบครบทุกอันซ้ำกันทันที แม้จะคนละ link กัน,ไม่ควรเบิ้ล,Major,Logic,Extra,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Extra, Effect=Functionality",,
+Procedure Log แสดง Satisfaction: Terrible ตลอดเวลา,procedure log detail,1. ไปที่หน้า procedure log detail 2. หัวข้อ satisfaction,procedure log ที่มาจากระบบเก่าจะขึ้นว่า terrible ทั้งหมดเพราะระบบเก่าไม่มี field performance,update field performance ของทุก Log ให้เป็น Okay/good ?,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+Approve all ส่ง Param ไปผิด,Approve All Modal,1. ใช้ role อาจารย์ 2. ไปที่หน้า Procedure Log 3. ใช้ Select log และ Approved,หลังบ้านลบค่าของ advisor ออกไปกลายเป็น null,,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+General: Conference time - part 5,Upcoming conference shows expired conference,(ต่อ) Login Student role (ที่ถูกAdd by creator) Conference จะไม่หายไปจาก Upcoming แม้จะเลยเวลาไปแล้วก็ตาม,ในหน้า Upcoming ของนักเรีบนแสดง conference ที่หมดอายุ,ไม่ควรพบรายการกิจกรรมที่หมดอายุใน Upcoming,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+General: Conference time - part 1,สร้าง Conference เวลาติดลบ & credit ติดลบได้,login ด้วย Teacher role และทำการสร้าง Conference และแก้ไขเฉพาะเวลาเริ่มกิจกรรมให้เลยเวลาปัจจุบันไป จากนั้นเลื่อนลงมา ทำแบบเดียวกันกับ เวลาเริ่มเช็คอินกิจกรรม,เวลาจบ จะมาก่อนเวลาเริ่ม และเครดิตจะติดลบ แต่หากกด save (android) credit จะเป็น 0 ในขณะที่ (ios) credit ยังติดลบ และไม่สามารถเข็คอินได้ แต่ creator สามารถ Add student เข้าได้ และเด็กจะเริ่มมองเห็นกิจกรรมดังกล่าว,ไม่ควรอนุญาตให้สร้าง เวลาเริ่ม หลังเวลาจบได้ หรือมีการเช็ค credit ต้องไม่0(android) หรือไม่ติดลบ(ios),Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Filter log status ไม่ถูกต้อง,1. กดหน้า procedure 2. เลือก log status (submitted/approved/rejected) 3. log ไม่ถูก filter ตาม status,log ควรถูก filter ตาม status,,,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+API procLogAPI.updateVerifyStatus ส่ง param ไปผิด,SceneProcedureDetails,1. เพิ่มอาจารย์ที่ปรึกษาเป็น → teacherOne 2. ใช้ role student ส่ง Log ไปหาอาจารย์คนอื่นที่ไม่ใช่ teacherOne (ส่งให้ อ.เอ ก็ได้) 3. ไปที่ procedure log นั้น และกด approve,api update ชื่ออาจารย์ที่ approve เป็นชื่ออาจารย์ที่ปรึกษา แทนที่จะเป็นชื่อของอาจารย์ที่ approve,api update ชื่อเป็นชื่อของคนที่กด approve,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+API update form 360 fail due to unconsumed form_structure_json,submit form 360,1. เข้าไปตอบ 360 2. กด submit,"ขึ้น fail submit { """"status"""": """"fail"""" info"""": """"[submissions] Failed to update submission: Unconsumed column names: form_structure_json"""" }",ควร suscess,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+Scroll View on Note from teacher ของ Android หาย,ไม่มี scroll ให้เลื่อนอ่าน note from teacher,,หากข้อความ note from teacher ยาวจะอ่านได้ไม่หมด,scroll อ่านได้,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Form evaluator เลือกไม่ตรงหมวดได้,form evaluator เลือกไม่ตรงหมวดได้,หากทำการสร้างฟอร์มประเภท360 แล้วเลือกผู้ประเมินเป็น นักเรียนหรืออาจารย์ ที่ระบุชื่อไปแล้ว ก็ยังสามารถเปลี่ยนหมวดของevaluator ให้ผิดได้ เช่น Teacher1 แต่เป็นหมวด Student/ or Other,แสดงข้อมูลผิดหมวด,,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+General: Notification mailbox,notification ที่ mailbox ไม่หาย,🍎 หากมีข้อความใหม่เข้า ไม่ว่าจะอ่านหรือ ประเมินไปแล้ว หากออกไปที่หน้า Home ตัว noti จะยังไม่หายไป จนกว่าจะเข้ามาใน mailbox อีกรอบ 🤖 หากเป็น Android ต้องกด Mark all as read 2 ครั้ง (student role) ถึงจะ read all แต่ noti หายทันทีที่กลับมา Home,Noti mail ค้าง จนกว่าจะกดเข้า mailbox รอบ2,เมื่อไม่มีข้อความค้างที่ยังไม่อ่าน และออกมาที่ Home ก็ควรไม่มีการแจ้งเตือนใดๆแล้ว,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+Consult แก้ไขเวลาไม่ได้,Consult แก้ไขเวลาไม่ได้,เมื่อนักเรียนทำการนัดหมายกับครูแล้ว อาจารย์จะ 1. กดปุ่ม Enter actual date time แก้ไขไม่ได้ เวลาจะแสดงค่า start=end 2. จะไม่สามารถตั้งเวลา follow up ได้ เพราะเวลาจะ start= end,,,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Quick gen ไม่สามารถ deactivate ได้,Quick gen ไม่สามารถ deactivate ได้,หน้า home > Quick gen > ไม่สามารถกด deact ได้,กด deact บน drawer ไม่เกิดผลอะไร,drawer ที่ปรากฎ ต้อง deactivate code ได้,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Cannot update min_req of procedure to newly created log_type,page /admin/procedure,1. สร้าง log_type (operator observe ..etc) 2. ไปที่หน้าสร้าง edit procedure 3. จะเห็นว่าช่อง min_req ของ log_type ใหม่ จะว่าง 4. เติม ค่า min_req ลงในช่องว่าง แล้วกด save,ถ้าเปิดขึ้นมาใหม่จะพบว่า min_req ไม่ถูก save ไป,ค่า min_req ควรจะ save,Major,Data,Missing,Coding,Functionality,,,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Missing, Effect=Functionality"
+Consult ปัญหาเวลาแบบเดียวกับ Conference,ตั้งเวลา start หลังจาก End ได้,เมื่อทำการสร้าง Consult ในช่องเวลาให้แก้เฉพาะ Start time ไปอนาคตไกลๆ ละกดสร้างเลย จะไม่มีการดักว่า End time ต้องปรับตาม,ทำให้ End time มาก่อน Start time ได้,Start time มาก่อน End time เสมอ,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+Procedure แนบฟอร์มไม่ได้,Procedure แนบฟอร์มไม่ได้,สร้างprocedure > กด + เพื่อแนบฟอร์ม > select epa or dop > select pre-requisite > select evaluator > submit form > ประเมินpre- requisiteตัวเองให้เรียบร้อย > Back > กลับมาหน้า Procedure logที่กำลังลงบันทึกอยู่ตอนแรก > พบว่าฟอร์มไม่แนบให้,ฟอร์มไม่แนบให้ หายไปเลย แต่ไปอยู่ในเมนู formแทน,ฟอร์มแนบพร้อม procedure log ได้ปกติ,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Enhance Export conference,Export conference,1. ไปที่ export 2. เลือก model export conference,export conference ไม่สามารถแยกว่าใครเป็น presenter/attendee ได้,,Major,Data,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Missing, Effect=Functionality",,
+General: MyForm number 440 is not response,cannot open page due to `ReferenceError: submission_id is not defined` from MyForm/440,log in as student1 and open MyForm form number 440 http://localhost:18080/myform/440,,,Critical,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+BACK button in new tab form was not function - patientcare,หลังจากเปิด form กดปุ่ม back แต่ปุ่ม back ไม่ navigate,เข้าหน้า pateintcare → เปิด patientcare → ตัว link redirect ไปเป็น new tab → กดปุ่ม back ด้านบนซ้าย,nothing happen,ควรกลับไปหน้า home,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Something went wrong,Something went wrong เฉพาะเวลา kill app > create new,Kill App > Login > Procedure log page > Create new procedure log > click + Form > Select EPA or DOP > Select Pre-requisite form > Select evaluator > select appointment date > submit form,Something went wrong,ส่งฟอร์มได้ปกติ พาไปทำSelf reflection,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+Display form operation_date(Performed date) on form detail,Menu Form,กดเข้าไปดู form detail,,เพิ่ม Performed date ไว้ใต้ Pending at,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+ใช้ Filter Custom date ของ conference ไม่ได้,Filter Drawer ในหน้า conference,ใช้ Filter Time เลือก Custom,Calendar ไม่สามารถเลือกวันที่ย้อนหนังได้,,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Advisor ไม่ขึ้น,อาจารย์ที่ปรึกษาไม่เห็น Log ของนักเรียนในที่ปรึกษา,1.ไปที่หน้า Procedure log 2.เลือก Select Log 3.Filter ไปที่ Advisor,อาจารย์ที่ปรึกษาหาย ทำให้ไม่เห็น log ที่นักเรียนในที่ปรึกษา Submitted,,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+ซ่อน Menu “logbook submission report”,User Profile,1. Login ด้วย Role ที่ไม่ใช่ student 2. ไปที่หน้า Profile 3. เลื่อนลงมาที่ที่ Menu “logbook submission report”,Role ที่ไม่ใช่ นักเรียนจะดาวน์โหลดข้อมูลไม่ได้,ซ่อนเมนูนี้ออกจาก Role ไม่ใช่นักเรียน,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+General: ซ่อน Download CSV จาก Dashboard Evaluation Form Completion (isMobileDevice),Dashboard Evaluation Form Completion,1. ไปที่หน้า Profile 2. เลือก My Dashboard 3. Tab “Form” เลื่อนลงมา “Evaluation Form Completion ” 4.ใส่ Filter แล้วกดปุ่ม “Download CSV”,ใน app ไม่สามารถ save file ผ่าน web view ได้,ซ่อนปุ่ม “download CSV” จากหน้า app,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+แก้ Procedure log Meta Type ให้เลือกได้อันเดียว,หน้า Procedure Log,ดู Reproduce step ในคลิปที่ Embed Files,,,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+General: Sort procedure by alphabet,Procedure Log,1. Login ด้วย Student 2. ไปที่ Procedure Log 3. เลือก procedure,Procedure ไม่เรียงตามตัวอักษร,,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+AbhailLog: View all Procedure Log โหลดไม่ขึ้น,- View all (Scene Procedure Log),1. Login ด้วย Student 2. ไปที่ Procedure Log 3. กดปุ่ม View all,โหลดไม่ขึ้น,,Critical,Logic,Missing,Coding,Performance,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Performance",,
+Kill App แล้วเปิด Evaluation Form Completion ไม่ได้,Scene Profile > Evaluation Form Completion,"1. Login ด้วย Student 2. Kill app ทิ้ง แล้วเข้า app ใหม่ 3. ไปที่ Profile 4. เลือก menu “Evaluation Form Completion 5. กด Search""",ระบบโหลดข้อมูลไม่ขึ้น,,Critical,Data,Missing,Coding,Performance,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Missing, Effect=Performance",,
+Kill app แล้วส่ง Pre-requisite form ไม่ได้,Scene EditForm - ส่ง form จาก menu form - ส่ง form ที่ผูกกับ procedure log,1. Login ด้วย student 2. Kill app ทิ้ง แล้วเข้า app ใหม่ 3. ไปที่ menu “Form” 4. เลือก Form EPA หรือ DOP 5. เพิ่ม Prerequisite Form 6. กด Send,IOS มี 2 แบบ (มีคลิปวิดีโอใน Embed Files) - มี Modal ขึ้นว่า Oops Error sending your submission… ต้องกดส่งซ้ำ 2-3 ครั้งถึงจะส่งไป และ redirect ไปหน้า Oops! something went wrong. - หลังจาก Send ไปแล้ว แต่จะ redirect ไปหน้า Oops! something went wrong. Android (เป็นแค่บางครั้ง) - มี Modal ขึ้นว่า Oops Error sending your submission… ต้องกดส่งซ้ำ 2-3 ครั้งถึงจะส่งไป,,Minor,Interface,Extra,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Extra, Effect=Usability",,
+Approve Required Procedure ในหน้า Home ขึ้น 0/0,Home > Approve Required Procedure,1. Login ด้วย student 2. ไปที่หน้า Home,เลขขึ้นว่า 0/0 แต่กดเข้าไปดูแล้วมีกดส่ง procedure อยู่,,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+Create conference บน mobile ไม่ เพิ่มเวลา Check-out ให้เหมือนใน Web,Conference,1. Login ด้วย teacher หรือ admin 2. สร้าง conference,เวลา Check-out ต้อง +1 ชม.จากเวลา End time,,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+General: Institute admin export ข้อมูลจาก pivot ไม่ได้ (ดักเคส No data),Pivot,1. Login ด้วย Institute Admin 2. Export Procedure/Patient Care รายงานข้อมูลการบันทึกหัตถการแบบสรุป(สำหรับอาจารย์แพทย์) 3. ใส่ filter ให้ครบ 4. กด preview หรือ export as XLSX,Error loading data,please check your filters 500 Internal Server Error,Critical,Data,Wrong,Coding,Performance,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Performance",,
+Can not upload picture,,Just upload user profile picture,Cannot up,,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+Cannot search course using multiple collage year of course,,login system_admin > manu admin > course > filter ด้วย college year มากกว่า 1 อัน,api error,ได้ search result ตาม college year ที่เลือก,Major,Logic,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Wrong, Effect=Functionality",,
+Default place value missing,page /admin/rotation,login role inst admin > admin > rotation > create new rotation (มี place อยู่) > กด cancel > กด new rotation,default place หายไป,default place ยังอยู่เหมือนเดิม,Major,Logic,Missing,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Logic, Mode=Missing, Effect=Functionality",,
+Pivot - rotation not be filtered by academic year and course,manu pivot,ไปที่ manu pivot > เลือก acadamic_year and college > เลือก course > ไปที่ tab rotation,rotation มาทุกอัน,rotation มาเฉพาะอันที่ตรงกับ acadamic year และ college year,Major,Data,Wrong,Coding,Functionality,"จัดกลุ่มตาม Keyword ที่พบ: Type=Data, Mode=Wrong, Effect=Functionality",,
+Victory cup not appear when select some rotation,,login student > profile > achievement > เลือก rotation demo-rotation > เลือก EPA1,,,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Evaluation Form Completion (UI),Menu Evaluation Form Completion,1. ไปที่ Dashboard: Form Evaluation Form Completion 2. กดที่ Card เพื่อดู Detail การส่ง Form 3. Drawer เปิดไม่เต็มหน้าจอ,- ดูไม่รู้เรื่อง,,Minor,Interface,Wrong,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Wrong, Effect=Usability",,
+General: Place of procedure ที่ Procedure log detail หาย,Procedure log detail,กดเข้าไปดู procedure log ที่ Submitted/Approved แล้ว,Place of procedure หาย,,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+General: Progress bar on the Approved Required Procedure card doesn't work,Scene Home,1. Login ด้วย student 2. ไปที่หน้า Home,Progress Bar ของ Approved require procedure ไม่แสดง ทั้ง ๆ ที่มีการ Approved แล้ว,,Minor,Interface,Missing,Coding,Usability,"จัดกลุ่มตาม Keyword ที่พบ: Type=Interface, Mode=Missing, Effect=Usability",,
+Icon menu score/patient care หาย,,,,,Minor,Interface,Missing,Design,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Missing),,
+Place of procedure should not controlled by feature form,Sence procedure edit > place of procedure always show when open feature form,-,-,ควรแยก feature กันระหว่าง place of procedure and form,Minor,Logic,Wrong,Coding,Functionality,จำแนกเป็น Logic/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+แก้ UI Filter Departments ที่หน้า course,Department admin > admin > course,"1.login ด้วย teacher1
+ 2.ไปที่เมนู admin > course",filter department ถูก disable ไว้,"แบบที่ 1. แก้ให้สามารถ filter ได้ → init value เป็น null 
+ แบบที่ 2. disable ไว้แต่ display ต้อง departments ทั้งหมดที่ user อยู่",Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+General: Navigate back ด้วย browser ที่หน้า Web ทำให้เกิด Log ว่าง,Procedure Log & Patient Care,"1. login ด้วย student
+ 2. ไปที่เมนู Procedure Log หรือ Patient Care
+ 3. กด + Add
+ 4. กดปุ่ม back ที่ browser",ไม่ delete log ให้ ทำให้ log ว่างอยู่ในระบบ,,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Bug cannot change rotation in home Scence,,home sence → change rotation → ลองเปลี่ยนไปหน้าอื่นๆ eg. procedure → กลับมา home → !! rotation ไม่เปลี่ยน,rotation เปลี่ยน,,Major,Logic,Missing,Coding,Functionality,จำแนกเป็น Logic/Missing เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+Select box in create course modal cannot use search,admin > course > new course,"new coures > type search in form, procedure group, department cannot search",,,Major,Logic,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Logic (Missing),,
+Select Box (course) in Modal edit/create rotation cannot search,admin > rotation > edit rotation,,,,Major,Logic,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Logic (Missing),,
+Missing Picture profile in form detail page,myform > form สักอัน,myform > form สักอัน > รูป profile ไม่ขึ้น,ต้องมีรูป profile หรือ default รูป profile,,Minor,Data,Missing,Coding,Functionality,จำแนกเป็น Data/Missing เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+"Cannot use {, [, ( as search params in api search procedure",resourses > Proedure Log > serach หน้าในช่อง box,,,,Major,Logic,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Logic (Missing),,
+Cannot type float number in value choice of question multiple choice/check,resourse > form > form_detail,,,,Major,Logic,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Logic (Missing),,
+Form > View All กดเข้าไปดูแล้ว ไม่สามารถ Navigate ไปหน้าอื่นได้,Student > Scene Form > View All,"1. ไปที่หน้า form
+ 2. กด View All
+ 3. กดปุ่ม Back หรือ กด inbox, rotation, profile",ไม่สามารถออกจากหน้า view all ได้,,Minor,Interface,Wrong,Design,Functionality,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Design,,
+General: Dashboard Superset ** cannot แก้ *** TT,,"1 ไปที่ Home
+ 2 กดที่สัญลักษณ์ลิ้งค์ที่แทปเมนู Procedure/Patientcare
+ 3 เปลี่ยนเป็นหน้า login",เปลี่ยนเป็นหน้า login,กดแล้วควรเป็น action ของสัญลักษณ์นั้น,Major,Logic,Missing,Requirements,Security,จำแนกเป็น Logic/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ซ่อนบางเมนูของ admin ออกจากราชวิทยาลัย,"Menu Admin> Course, Rotation > Users > Student Group","1. Login ด้วย Institute Admin
+ 2.ไปที่เมนู admin","Institute admin ของราชวิทยาสามารถ edit course, rotation และ student group ได้
+ ทำให้สร้างและแก้ไขข้อมูลได้เอง ทำให้ระบบเกิดความผิดพลาด",จำกัดเฉพาะ System Admin ที่สามารถแก้ไข้ได้,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Click change rotation multiple times make application crash,,click nav bar procedure > change rotation > multiple times,,,Critical,Interface,Wrong,Design,Performance,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Wrong),,
+Cannot load file in Conference using mobile,conference web view page,conference > click download link file > permission denined,can download file,,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Bug Form ไม่สามารถ save ได้,Form Detail > Questions > Multiple choice,"1.กดสร้าง Form
+ 2.ตั้งชื่อ
+ 3.Edit Questions
+ 4.กด Add new question
+ 5. เลือก qtype = multiple choice
+ 6. Add new choice
+ 7. กด Add new choice ครั้งที่ 2 
+ 8. ใส่เลข",หลังจาก ใส่เลขแล้ว choice ข้อที่ 1 หายไป แล้วพอกด Update ระบบก็เด้งไปหา Oops Something went wrong แล้วต้อง login เข้ามาใหม่,ควรจะ save choice ที่สร้างได้,Major,Data,Missing,Requirements,Security,จำแนกเป็น Data/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Filter inactive logbook out from logbook dashboard,dashboard logbook > Summary & Procedure List,"1. login
+ 2. menu dashboard > logbook
+ 3. filter Rotation, Student Group and Student",logbook ที่ถูกลบไปแล้วยังแสดงอยู่ใน Summary & Procedure List,filter log ที่ถูก delete ทิ้งไปออก,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+General: Form Result ไม่แสดง,หน้า form submission detail,"1.เข้า log ด้วย user 57706
+ 2.ไปที่หน้า my form
+ 3.เลือก form DOPs 3
+ 4. form ที่ส่งหลังจากวันที่ 15 March 2024",Result ไม่ขึ้นเพราะติด Pagination ใน api search,,Major,Data,Missing,Coding,Functionality,จำแนกเป็น Data/Missing เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+ส่ง Submission ไม่ได้,เมนู Form,"1.Log in ด้วย student
+ 2.ไปที่เมนู form
+ 3.กด +
+ 4.ลองส่ง Form",เวลาที่ส่ง Form ไปแล้วจะขึ้นว่า Oops! Something went wrong ที่จริง ๆ แล้วส่ง Form ไป ส่วนใน Rancher มี Error ตาม File ด้านล่าง,ควรจะส่ง Form ได้ หรือถ้าส่ง Form ไปแล้วก็ไม่ควรมี Error ขึ้น เพราะถ้ามี Error ขึ้นลูกค้าจะกดส่งอีกครั้ง จนมี Submission ซ้ำกันบนระบบเยอะ,Major,Data,Missing,Coding,Functionality,จำแนกเป็น Data/Missing เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+Evaluation Form Completion แสดง Result ผิด,Dashboard Evaluation Form Completion,"1. ไปที่ Dashboard Evaluation Form Completion
+ 2. เลือก Filter ตามรูปด้านล่าง","- Condition Non-trauma ขั้นที่ 2 แสดงจำนวน Passed ผิด 
+ - อาจารย์ประเมินใน Form ว่าผ่านระดับ 3 แล้ว แต่ระบบให้ผ่านแค่ขั้น 1 ทั้งที่ควรจะผ่านขั้น 1 และ 2",,Minor,Data,Wrong,Coding,Functionality,จำแนกเป็น Data/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+cannot filter in Dashboard Superset,dashboard superset > ไม่แสดงข้อมูลที่ filter ด้วย Procedure,"1. ไปที่หน้า home
+ 2. เลือก filter ด้วย Procedure (รูปใน comment)",,หากเลือก Procedure เป็น criteria ต้องสามารถใช้งานได้,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+พิมพ์ Note ยาว ๆ แล้วส่ง Form Submission ไม่ได้,เมนู Form,"1. Login ด้วย Student
+ 2. ไปที่เมนู Form
+ 3. กดเพิ่ม Form
+ 4. ใส่ Note ยาว ๆ",ปุ่ม Send Form เลื่อนลงไปข้างล่างแล้วกดส่งไม่ได้,"- Fixed ขนาดกล่อง Note แล้วใส่ ScrollView หรือ
+ - เพิ่ม margin bottom ของปุ่ม Send Form (ดูตัวอย่างได้ที่หน้า Add procedure log)",Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Cannot pivot procedure with very large data,admin > pivot > รายงานแบบสรุป (สำหรับอาจารย์แพทย์),,,,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+Change logic filter conference,Filter conference,"1. login ด้วย student 
+ 2. ไปที่ menu Conference",ไม่เห็น Conference ที่ไม่ได้ใส่ Rotation (Rotation == ALL),ถ้าใส่ Rotation ที่ conference เป็น ALL ควรเห็นทุก rotation,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Export > Duty Hour > Checkin/Checkout time ที่ export ได้ ไม่ตรงกับบนเครื่อง นศพ,Checkin/Checkout time ที่ export ได้ ไม่ตรงกับบนเครื่อง นศพ,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+Export > Duty Hour > ได้ Lat/Long = 0,Export > Duty Hour > ได้ Lat/Long = 0,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+add student’s rotation field in Export DutyLog Hour,,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+application crash,consultation,login as student > home > nav bar - consultation > application crash,application crash > app close,enter to consultation scene,Critical,Logic,Wrong,Requirements,Security,จำแนกเป็น Logic/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Can not create log in active rotation,login with student1 > procedure log page,login with student1 > procedure log > change rotation to Test Rotation By 2 > click “+ Add” button,can not click button,redirect to new log edit page,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Add loader when selecting evaluator,Procedure edit scence,procedure > select evaluator,wait some minutes to enable submit button,have a loader during validate evaluator,Minor,Interface,Wrong,Design,Performance,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Performance ในขั้นตอน Design,,
+Missing notification after form submit,-,login with teacher > submit form,no notification in student,have notification,Minor,Logic,Missing,Requirements,Security,จำแนกเป็น Logic/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+สร้าง Sub-Conference ไม่ได้ และ Sub Conference ไม่ขึ้น,Conference,"1.สร้าง Conference
+ 2.สร้าง Sub Conference","ไม่สามารถสร้าง Sub conference ได้, Sub conference ที่สร้างไว้แล้วไม่ขึ้น",สามารถสร้าง sub conference ได้ และ มี sub conference ขึ้น,Major,Logic,Missing,Coding,Functionality,จำแนกเป็น Logic/Missing เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+Score created fail when create Score via Aneslog App,ไม่สามารถ Create Score ผ่าน AnesLog App ได้,"AnesLog Mobile
+ 1. เข้า AnesLog Mobile
+ 2. Login as Teacher
+ 3. กดรูป Profile
+ 4. เลือกเมนู Score
+ 5. กดปุ่ม + SCORE
+ 6. ระบุ Score Detail
+ 7. กด Confirm",Score created fail,สามารถ Create Score ใน AnesLog ได้,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+เปลี่ยน Wording ของค่า Min และ Max ในเมนู Score,มีปัญหาในการเข้าใจ wording ในค่า mix และ max ของเมนู score,"AnesLog
+ 1. เลือกเมนู Score
+ 2. กดปุ่ม + SCORE (NEW)
+ 3. ระบุ Score Detail (Score)","Min คือ คะแนนต่ำสุดของ, Max คือ คะแนนเต็ม ของการสอบ",,Minor,Interface,Wrong,Design,Usability,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Usability ในขั้นตอน Design,,
+Export ข้อมูลแล้ว Field Procedure Name ขึ้นเป็น 0,Menu Export,,,,Major,Interface,Wrong,Design,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Wrong),,
+เพิ่ม Field Procedure level ที่ Export,,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+ปรับ Title ของ Form โดยที่เห็นชื่อ Form ทั้งหมด,ชื่อ Title Form ที่ยาวเกินไปจะตัดเป็นตามด้วย …. แทน,"Student
+ 1. เลือกเมนู Home
+ 2. เลือกเมนู My Form
+ 
+
+ Teacher
+ 1. เลือกเมนู Instructor
+ 2. เลือกเมนู My Form",เห็นชื่อ Title Form ไม่ครบ,เห็นชื่อ Title Form ทั้งหมด,Minor,Logic,Extra,Coding,Functionality,จำแนกเป็น Logic/Extra เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+เมื่อคลิก หรือ open เข้าที่ Form จะเปลี่ยนจาก Current Window เป็น Open New Window,ต้องการให้หน้า Form ที่เลือกไปเปิดในแถบหน้าต่างใหม่ หรือ new window,"Teacher
+ 1. เลือกเมนู Instructor
+ 2. เลือกเมนู My Form",รูปแบบ Form ที่เลือกจะเปิดในแถบหน้าปัจจุบัน หรือ current window,รูปแบบ Form ที่เลือกจะไปเปิดเป็นแถบหน้าต่างใหม่ หรือ new window,Minor,Data,Wrong,Coding,Functionality,จำแนกเป็น Data/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+พบ Something went wrong เมื่อกดเข้า Prerequisite Form ผ่านมือถือ Android,"เมื่อกดเข้า Prerequisite Form ของมือถือ Android จะปรากฎ Oops!, Something went wrong (คนเกาหัว).","Android & IOS
+ 1. เลือกเมนู Form ด้านล่าง
+ 2. กดเข้า Form
+ 3. กด Prerequisite Form",ไม่สามารถกดเข้า Prerequisite Form ในมือถือ android ได้,สามารถกดเข้า Prerequisite Form ในมือถือ android ได้,Minor,Interface,Wrong,Design,Usability,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Usability ในขั้นตอน Design,,
+ทุกครั้งที่ทำการ kill app เข้าใหม่แล้วสร้าง Form EPA/DOP จะเจอกับคนเกาหัว,เจอคนเกาหัว เมื่อสร้าง Form EPA/DOP ทุกครั้งหลังจาก kill app แล้วเข้าใหม่,"Student (IOS)
+ 1. login Log as student
+ 2. kill app หรือ ปัดหน้าจอ app ทิ้ง
+ 3. กดเข้า app ใหม่อีกครั้ง
+ 4. เลือกเมนู Form หรือกด + Add Form
+ 5. เลือก Form EPA/DOP > เลือก Self Reflection Form
+ 6. เลือก Evaluator
+ 7. กด Send",เจอคนเกาหัว เมื่อสร้าง Form EPA/DOP ทุกครั้งหลังจาก kill app แล้วเข้าใหม่,ไม่เจอคนเกาหัว เมื่อสร้าง Form EPA/DOP,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ไม่สามารถ Search ดู Achievement ได้,เข้าไปดู Achievement และเลือก Rotation กับ Form เมื่อกด Search ไม่มีอะไรปรากฎขึ้นมาเลย,"Mobile
+ 1. Login as student
+ 2. Choose or press Profile Icon
+ 3. Choose menu My Achievement
+ 4. Select Rotation
+ 5. Select Form
+ 6. Press “Search” button
+ 
+
+ Website
+ 1. Login as student
+ 2. Click menu Profile
+ 3. Click menu Achievement
+ 4. Select Rotation
+ 5. Select Form
+ 6. Press “Search” button",เมื่อกด Search แล้วไม่ปรากฎอะไรเลย,จะปรากฎ Achievement ของ Form ที่เลือกใน Rotation นั้นๆ,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+[General] ไม่มีการแสดง Rotation หรือ Department ของผู้ส่ง Form,ไม่มี Rotation หรือ Department บอกว่า Form จากมากไหน,"Website
+ 1. Login as Teacher
+ 2. Choose menu Instructor
+ 3. Choose menu My Form
+ 4. Click or Press “Form”
+ 5. Scroll down to Form (Form Detail)",ไม่ปรากฎ Rotation or Department ของผู้ส่ง Form,ปรากฎ Rotation or Department ของผู้ส่ง Form,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+แอพค้างที่หน้าจอสีขาวเวลา Navigate Back กลับมาที่หน้า Home,SceneHome,"1.Login ด้วย Student
+ 2.กดไปดูเมนูอื่น ๆ หรือ กดปุ่ม Procedure Log Progress, Patient Care Log
+ 3.Back กลับมาที่หน้า home",แอพค้างขึ้นหน้าจอสีขาว ต้อง kill app ทิ้งแล้วเข้าใหม่ถึงจะใช้งานได้ปกติ,ระบบควรจะ Navigate กลับมาที่หน้า home ได้ปกติ,Critical,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Question type: Slider เมื่อเลือกตอบใน slide bar แล้วคำตอบที่เลือกมีการลิงค์กับคำตอบของ slider ข้ออื่นในฟอร์มเดียวกัน,Slide bar ที่เลือกตอบมีการลิงค์หรือเชื่อมกับ slide bar ในข้ออื่นในฟอร์มนั้นๆ,"Website
+ 1. Login as teacher1
+ 2. Select menu “Instructor”
+ 3. Choose menu “My Form”
+ 4. Select Form Type “RegularForm”
+ 5. Choose or click “Form 101”
+ 
+
+ Mobile
+ 1. Login as teacher1
+ 2. Select menu “Form”
+ 3. Choose or press “Form 101”",Slide bar ที่เลือกตอบมีการลิงค์หรือเชื่อมกับ slide bar ในข้ออื่นในฟอร์มนั้นๆ,Slide bar ที่เลือกตอบจะไม่มีการลิงค์กับ slide bar ในข้ออื่นๆ,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Question type: Slider เมื่อกด submit form แล้วคำตอบที่เลือกไม่บันทึก,เมื่อกด submit form แล้วคำตอบที่เลือกไม่บันทึกและไม่ปรากฎใน Form นั้น,"Website
+ 1. Login as teacher1
+ 2. Select menu “Instructor”
+ 3. Choose menu “My Form”
+ 4. Select Form Type “RegularForm”
+ 5. Choose or click “Form 101”
+ 
+
+ Mobile
+ 1. Login as teacher1
+ 2. Select menu “Form”
+ 3. Choose or press “Form 101”",เมื่อกด submit form แล้วคำตอบที่เลือกไม่บันทึกและไม่ปรากฎใน Form นั้น,เมื่อกด submit form แล้วคำตอบที่เลือกจะบันทึกลงในระบบและปรากฎขึ้นใน Form นั้น,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+General: การ Pivot form ทุกอัน ไม่สามารถ Filter ด้วย student ได้,"ไม่สามารถเลือก หรือ Filter ด้วย student ได้
+ เมื่อเลือก หรือ filter ด้วย student หนึ่งคนแต่ข้อมูลของนิสิตนั้นมาปรากฎทั้งหมดทุกคน","Login as Admin
+ 1. Select menu “Admin”
+ 2. Select menu “Pivot”
+ 3. Choose “Form” tab
+ 4. Click menu tab “ปีการศึกษา” and change ปีการศึกษา 2024 to 2017
+ 5. Click menu tab “รายวิชา” and select all
+ 6. Click menu tab “Rotation” and select all
+ 7. Click menu tab “นักเรียน” and select “ลัดดา จุลมุสิ” 
+ 8. Click menu tab “แบบประเมิน” and select “EPA16”
+ 9. Click menu tab “การคำนวณ” and select min
+ 10. Click menu tab “คำถาม” and select “Self-reflection”
+ 11. Then press “Preview” button",เมื่อเลือก หรือ filter ด้วย student หนึ่งคนแต่ข้อมูลของนิสิตคนนั้นไม่ได้ปรากฎ,สามารถเลือก หรือ Filter ด้วย student ได้,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+แก้ไขให้ในหน้า dashboard ไม่แสดงสถานะ pending ของที่ form แนบ procedure ที่มีสถานะ draft,Procedure / Patient Care ที่มีสถานะ Draft ไปปรากฎใน Menu Home > Dashboard,"Login as Teacher
+ 1. Choose menu “Home”
+ 2. Select course “อายุรศาสตร์ ปี5”
+ 3. Select Department “Medicine”
+ 4. Select Menu “Form” under Sprlog Admin Dashboard
+ 5. Click “APPLY FILTERS”",Procedure / Patient Care ที่มีสถานะ Draft ไปปรากฎใน Menu Home > Dashboard,ให้หน้า Dashboard แสดงสถานะของ Form ที่แนบ Procedure / Patient Care ที่มีสถานะ Pending เท่านั้น,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+General: ในหน้า Form อยากให้ Department Admin สามารถ Filter ด้วย Menu Admin Filter ได้,ไม่มี Admin Filter Menu ใน Role ของ Department Admin,"Login as Teacher1
+ 1. Choose menu “Instructor”
+ 2. Select menu “My Form”
+ 3. Select “Filter” Menu",Roles: Department Admin ไม่สามารถใช้งาน Menu Admin Filter ในหน้า Form Menu ได้,Roles: Department Admin สามารถใช้งาน Menu Admin Filter ในหน้า Form Menu ได้,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+เพิ่ม Tags ของ Symptom และ Diagnosis ที่เพิ่มเข้ามาใหม่ของ Patient Care,Symptom (อาการนำ) และ Diagnosis (โรค/ภาวะ) ที่ได้ทำการ Add เข้าไปใหม่ใน Patient Care ยังไม่อยู่ใน Tags ค้นหาของ Orthopedics และ Anesthesiology,"Login as Student
+ 1. Select menu “Patient Care”
+ 2. Press + or Add Patient Care
+ 3. Choose “อาการนำ” or “โรค/ภาวะ” in Patient Care Detail
+ 4. Choose Tags “Orthopedics” or “Anesthesiology”",Symptom (อาการนำ) และ Diagnosis (โรค/ภาวะ) ที่ได้ทำการ Add เข้าไปใหม่ใน Patient Care ยังไม่อยู่ใน Tags ค้นหาของ Orthopedics และ Anesthesiology,Symptom (อาการนำ) และ Diagnosis (โรค/ภาวะ) ที่ได้ทำการ Add เข้าไปใหม่ใน Patient Care ไปปรากฎอยู่ใน Tags ค้นหาของ Orthopedics และ Anesthesiology,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ในหน้า Home ให้มีการแสดงสถานะของ Form ขึ้นมา,ในหน้า Home ปัจจุบัน ยังไม่มีสถานะของ Form มีแต่ Procedure และ Patient Care,"Login
+ 1. Select menu “Home”",ในหน้า Home ปัจจุบัน ยังไม่มีสถานะของ Form มีแต่ Procedure และ Patient Care,"อยากให้หน้า Home มีการแสดงสถานะ Form ด้วย (Draft, Submitted, Rejected, Approve)",Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ตรวจสอบการลง log/form ของ 69170,คุณหมอแจ้งว่าเคยลง procedure/form แล้วข้อมูลหาย,,,,Minor,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+กด Link ของ Conference แล้ว ขึ้นว่า No conference found,Conference Detail,กดเข้าไปดู conference จาก link ที่ admin ส่งให้ทาง Line,ขึ้นหน้า “No conference found.”,ทำ flow ให้เหมือนเวลากดดู form ที่ได้รับการแจ้งเตือนจากทาง email,Minor,Logic,Wrong,Coding,Functionality,จำแนกเป็น Logic/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Coding,,
+เพิ่ม Column Displacement เพื่อดูว่าระยะห่างระหว่าง Dutylog location ของ QR Code กับ ตำแหน่งที่ Student CheckIn - CheckOut,,"Login as Teacher
+ 1. Select menu “Admin”
+ 2. Select menu “Pivot”
+ 3. Select tab menu “Dutylog Hour”
+ 4. Choose รายวิชา “อายุรศาสตร์ปี 4”
+ 5. Rotation “อายุรศาสตร์ ปี4-ปี4 กลุ่ม 1”
+ 6. Select button “Preview”",มี Column Displacement ใน Pivot ของ Duty Log Hour,อาจารย์ Requirement มาว่าต้องการให้เพิ่ม Column Displacement ใน Pivot ของ Duty Log Hour เพื่อดูว่าระยะห่างระหว่าง Dutylog location ของ QR Code กับ ตำแหน่งที่ Student CheckIn - CheckOut,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Student can’t select procedure log after changed profile picture,"เมื่อคุณหมอทำการสร้าง Procedure และเลือก save เป็นรูปแบบ draft จากนั้นค่อยมาทำการแนบรูปใน Procedure ทีหลัง แต่ไม่สามารถเข้าไปทำการแก้ไขใน draft นั้นได้
+ 
+
+ แม้ว่าจะทำการ kill app และเข้าใหม่แล้วก็ตาม จะต้องทำการ logout - login ใหม่เท่านั้น","Login as Student1
+ 1. Select profile picture
+ 2. Select button “Edit Profile”
+ 3. Select profile picture and change picture
+ 4. Select button “Save Changes”",คุณหมอไม่สามารถเลือกกดเข้าไปใน procedure log ได้,คุณหมอสามารถเลือกกดเข้าไปใน procedure log ได้,Major,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Sometimes student can’t change profile picture at first try.,เมื่อ login เข้ามาแล้วต้องการทำการเปลี่ยนรูป มากกว่า 1-2 ครั้งถึงจะสามารถเปลี่ยนรูป profile ได้ หรือ ต้อง kill app และ ทำการเปลี่ยนรูป มากกว่า 1-2 ครั้งเช่นกัน ถึงจะสามารถเปลี่ยนรูปได้,"Login as Student1
+ 1. Select profile picture
+ 2. Select button “Edit Profile”
+ 3. Select profile picture and change picture
+ 4. Select button “Save Changes”",เมื่อ login เข้ามาแล้วต้องการทำการเปลี่ยนรูป มากกว่า 1-2 ครั้งถึงจะสามารถเปลี่ยนรูป profile ได้ หรือ ต้อง kill app และ ทำการเปลี่ยนรูป มากกว่า 1-2 ครั้งเช่นกัน ถึงจะสามารถเปลี่ยนรูปได้,สามารถเปลี่ยนรูป profile ได้ตั้งแต่ครั้งแรกหลังจากทำการ login หรือ ทำการ kill app แล้วเข้าใหม่,Major,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+"When you refresh the screen or pull down in “Home” menu, your rotation will also change.",เมื่อทำการ pull refresh หรือดึงหน้าจอลง ในหน้าเมนู “Home” จะทำให้เปลี่ยน Rotation ไปเลย และทำให้ดูเหมือนว่าข้อหาย หาข้อมูลไม่เจอ,"Login as Student
+ 1. Pull refresh or scroll down in “Home” menu",เมื่อทำการ pull refresh หรือดึงหน้าจอลง ในหน้าเมนู “Home” จะทำให้เปลี่ยน Rotation ไปเลย และทำให้ดูเหมือนว่าข้อหาย หาข้อมูลไม่เจอ,เมื่อทำการ pull refresh หรือดึงหน้าจอลง ในหน้าเมนู “Home” จะไม่ทำให้เปลี่ยน Rotation,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ผู้ประเมินไม่สามารถกดเข้าไปใน Form ประเภท 360 ได้,เมื่อ Student ทำการส่ง Form ที่เป็นประเภท 360 แล้วเลือกผู้ประเมินเป็น Student ด้วยกัน จะทำให้ผู้ถูกประเมิณ ไม่สามารถกดเข้าไปดู Form ได้ แล้วจะเจอกับคนเกาหัว,"Login as student1
+ 1. Select menu “Form”
+ 2. Select menu “Add Form”
+ 3. Select form “Peer Evaluation”
+ 4. Select Evaluator as Student “Mr. Student Zero”
+ 5. Click “Send”
+ 6. Open Peer Evaluation Form",พบเจอคนเกาหัวเมื่อกดเข้า Form 360 ของผู้ประเมิน และไม่สามารถเข้าไปประเมิน form ได้,จะไม่พบเจอคนเกาหัวเมื่อกดเข้า Form 360 ของผู้ประเมิน และสามารถเข้าไปประเมิน form ได้,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ผู้ที่สร้างแบบประเมินไม่สามารถกดเข้าไปใน Form ประเภท 360 ได้,เมื่อ Student ทำการส่ง Form ที่เป็นประเภท 360 แล้วเลือกผู้ประเมินเป็น Student ด้วยกัน จะทำให้ผู้ที่สร้างแบบประเมิน ไม่สามารถกดเข้าไปดูแบบ Form ที่ตัวเองสร้างขึ้นมาได้ แล้วจะเจอกับคนเกาหัว,"Login as student1
+ 1. Select menu “Form”
+ 2. Select menu “Add Form”
+ 3. Select form “Peer Evaluation”
+ 4. Select Evaluator as Student “Mr. Student Zero”
+ 5. Click “Send”
+ 6. Open Peer Evaluation Form",พบเจอคนเกาหัวเมื่อกดเข้า Form 360 ของผู้ที่เป็นคนสร้างแบบประเมิน และไม่สามารถเข้าไปดูแบบ form ที่ตัวเองสร้างได้,จะไม่พบเจอคนเกาหัวเมื่อกดเข้า Form 360 ของผู้ที่เป็นคนสร้างแบบประเมิน และสามารถเข้าไปดูแบบ form ที่ตัวเองสร้างได้,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ไม่มีแจ้งเตือนในช่อง Inbox เมื่อได้รับ Form แบบประเมิน,เมื่อนิสิตส่งแบบประเมิน หรือ Form มาให้กับอาจารย์ แบบประเมินนั้นจะไม่ถูกแจ้งเตือนหรือเพิ่มเข้ายังช่องจดหมาย “Inbox”,"Login as student1
+ 1. Select menu “Form”
+ 2. Select menu “Add Form”
+ 3. Select form “EPA1”
+ 4. Select Evaluator as “teacher1”
+ 5. Click “Send”
+ 
+
+ Login as teacher1
+ 1. Select menu “Inbox” or mail icon",ไม่มีแจ้งเตือนในช่อง Inbox เมื่อได้รับแบบประเมิน แต่แบบประเมินขึ้นในหน้า Form ปกติ,ต้องมีเลขและการแจ้งเตือนในช่อง Inbox เมื่อได้รับแบบประเมิน เมื่อแบบประเมินขึ้นในหน้า Form,Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ไม่สามารถ Load Data ในเมนู Portfolio ได้,เมื่อกดเข้าไปยังเมนู Portfolio แล้วระบบจะขึ้นว่า “Cannot Load Data” และไม่สามารถโหลดข้อมูลในหน้า Portfolio ได้,"Login as student
+ 1. Select menu “Home”
+ 2. Select menu “Portfolio”",เมื่อกดเข้าไปยังเมนู Portfolio แล้วระบบจะขึ้นว่า “Cannot Load Data” และไม่สามารถโหลดข้อมูลในหน้า Portfolio ได้,เมื่อกดเข้าไปยังเมนู Portfolio จะไม่แสดงคำว่า “Cannot Load Data” และสามารถโหลดข้อมูลในหน้า Portfolio ได้,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Your department disappear when you save or cancel in edit profile,"1. เมื่อ Teacher ทำการแก้ไขหรือ Edit Profile และทำการ Save Changes หลังจากสลับเมนูกลับไปมา ปรากฎว่า Department ประจำตัวหายไป
+ 2. เมื่อ Teacher เข้าไปใน Edit Profile แต่ยังไม่ได้ทำการเปลี่ยนแปลง และกด Cancel ปรากฎว่า Department, Email และ Phone number หายไป","Login as Teacher001 [Save button]
+ 1. Select Profile Menu
+ 2. Select menu “Edit Profile”
+ 3. Change “Nickname, e-mail or phone”
+ 4. Then press “Save Changes” button
+ 5. Switch “Back” to Home page
+ 6. Switch back to Profile Menu again
+ 
+
+ Login as Teacher002 [Cancel button]
+ 1. Select Profile Menu
+ 2. Select menu “Edit Profile”
+ 3. Then press “Cancel” button
+ 4. Switch “Back” to Home page
+ 5. Switch back to Profile Menu again","สำหรับการ “Save Changes”
+ เมื่อทำการเปลี่ยนแปลงข้อมูลในหน้าโปรไฟล์และกด save จากนั้นสลับเมนูกลับมาดู ปรากฎว่า Department หายไป
+ 
+
+ สำหรับการ “Cancel”
+ เมื่อทำการกด cancel จากนั้นสลับเมนูกลับมาดู ปรากฎว่า Department, e-mail และ phone หายไป",เมื่อทำการเปลี่ยนแปลง แก้ไข หรือ Edit Profile จากนั้นกด Save or cancel ข้อมูลจะไม่หายไป,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+form ไม่แสดงในเมนู form ของ teacher เนื่องจาก student/teacher ไม่ได้อยู่ Place เดียวกัน,,,,,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+form ที่ส่งมาไม่แสดงใน inbox,,,,,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+จำนวน Procedure บนระบบใหม่แสดงจำนวนไม่ตรงเมื่อเทียบกับระบบเก่าในเมนู Procedure Log,"1. เคสในระบบใหม่แสดงไม่ครบ ขาดหายไป 30 หัตถการเมื่อเทียบจากระบบเก่าในหน้าเมนู Procedure Log จากเดิม 184 หัตถการ
+ 
+
+ 2. เคสในระบบใหม่แสดงไม่ครบ ขาดหายไป 8 หัตถการเมื่อเทียบจากระบบเก่าในหน้าเมนู Procedure Log จากเดิม 200 หัตถการ","Login as 65110
+ 1. Select menu “Home”
+ 2. Select menu “Procedure Log”
+ 
+
+ Login as 62487
+ 1. Select menu “Home”
+ 2. Select menu “Procedure Log”","1. จำนวน Procedure ที่แสดงในเมนู Procedure Log บนระบบใหม่แสดง 153 หัตถการไม่ครบเมื่อเทียบกับระบบเก่าอยู่ที่ 184 หัตถการ คือหายไปจำนวน 31 หัตถการ
+ 
+
+ 2. จำนวน Procedure ที่แสดงในเมนู Procedure Log บนระบบใหม่แสดง 192 หัตถการไม่ครบเมื่อเทียบกับระบบเก่าอยู่ที่ 200 หัตถการ คือหายไปจำนวน 8 หัตถการ","1. จำนวน Procedure ที่แสดงในเมนู Procedure Log บนระบบใหม่ต้องแสดงจำนวนครบทุกหัตถการเมื่อเทียบกับระบบเก่าอยู่ที่ทั้งหมดคือ 184 หัตถการ
+ 
+
+ 2. จำนวน Procedure ที่แสดงในเมนู Procedure Log บนระบบใหม่ต้องแสดงจำนวนครบทุกหัตถการเมื่อเทียบกับระบบเก่าอยู่ที่ทั้งหมดคือ 200 หัตถการ",Minor,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+กด approve procedure แล้วขึ้น cannot update data B,เมื่ออาจารย์ทำการ กด approve procedure บนเว็บไซต์ ระบบจะขึ้นแจ้งเตือนว่า “cannot update data B”,,เมื่ออาจารย์ทำการ กด approve procedure บนเว็บไซต์ ระบบจะขึ้นแจ้งเตือนว่า “cannot update data B”,เมื่ออาจารย์ทำการ กด approve procedure บนเว็บไซต์ จะไม่เจอกับข้อความแจ้งเตือนว่า “cannot update data B”,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+Data แสดงบนเว็บไซต์ แต่ไม่แสดงบนมือถือหรือแสดงไม่ครบ,Data ที่แสดงบนมือถือ ไม่แสดงหรือแสดงไม่ครบและไม่ตรงกับ Data ที่แสดงบนเว็บไซต์,"Login as 30883
+ 1. Select menu “Home”
+ 2. Select menu “Procedure Log”
+ 
+
+ Login as 22651
+ 1. Select menu “Home”
+ 2. Select menu “Procedure Log”
+ 
+
+ Login as 19653
+ 1. Select menu “Home”
+ 2. Select menu “Procedure Log”",Data ที่แสดงบนมือถือ ไม่แสดงหรือแสดงไม่ครบและไม่ตรงกับ Data ที่แสดงบนเว็บไซต์,"Data ที่แสดงบนมือถือต้องแสดง, แสดงให้ครบและตรงกับ Data ที่แสดงบนเว็บไซต์",Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+[General] ขึ้น No permission ในหน้า Procedure Log,เมื่อทำการเลือก Role ที่เป็น Institute Admin อย่างเดียวโดยที่ไม่ได้เลือกคู่กับ Instructor/Staff ปรากฎว่า เมื่อเข้าเมนู Procedure Log จะเจอกับคำว่า “No permission”,,เมื่อเลือก Role แค่ “Institute Admin” อย่างเดียว เมื่อเข้าเมนู Procedure Log จะพบกับคำว่า “No permission”,เมื่อเลือก Role แค่ “Institute Admin” อย่างเดียว เมื่อเข้าเมนู Procedure Log จะไม่พบกับคำว่า “No permission”,Major,Logic,Missing,Requirements,Security,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Logic (Missing),,
+เมื่อทำการ Save draft หรือ Submit Procedure Log แล้วชื่อของ Procedure หายไป,เมื่อทำการ Save draft หรือ Submit Procedure Log แล้วชื่อของ Procedure หายไป,"Login as Student001
+ 1. Select menu “Procedure Log”
+ 2. Click “+Add Procedure Log”
+ 3. กรอกข้อมูล Procedure ต่างๆ
+ 4. Click “Save Draft” or “Submit”",เมื่อทำการ Save draft หรือ Submit Procedure Log แล้วชื่อของ Procedure หายไป,เมื่อทำการ Save draft หรือ Submit Procedure Log แล้วชื่อของ Procedure จะปรากฎหรือไม่หายไป,Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+user ไม่สามารถ export เองได้เนื่องจาก export ระเบิด,user ไม่สามารถ export เองได้เนื่องจาก export ระเบิด,,,,Critical,Data,Wrong,Coding,Performance,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+"เมนู Filter ใน Dashboard > Evaluation Form Completion, Filter ข้อมูลออกมาไม่ถูกต้อง",เมื่อทำการเลือก Student Group มา 1 group ปรากฎว่าเมื่อกด Search จะได้ข้อมูลของ Student Group อื่นมาแสดงด้วย,"Login as teacher
+ 1. Select menu “Dashboard”
+ 2. Scroll down to “Evaluation Form Completion”
+ 3. กรอกข้อมูลตามที่แนบ
+ - Rotation: 2022
+ - Form: EPA3 Document
+ - Institute: คณะแพทยศาสตร์ มหาวิทยาลัยสงขลานครินทร์
+ - Student group: 65_MDPSU
+ 4. Click “Search”",เมื่อทำการเลือก Student Group มา 1 group ปรากฎว่าเมื่อกด Search จะได้ข้อมูลของ Student Group อื่นมาแสดงด้วย,ข้อมูลที่ทำการ Filter มาจะตรงกับข้อมูลที่เลือก,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+ไม่สามารถดู “Dashboard Superset” ได้,,"Login as teacher001
+ 1. Select menu “Home”",เมื่อเข้าระบบแล้วเข้าดูเมนู “Home” จะไม่สามารถเข้าดูข้อมูลได้ จะแสดงว่าปฏิเสธการเชื่อมต่อ,จะสามารถดูข้อมูลในเมนู “Home” ได้,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Credit < 1 จะถูกปัดลงและแสดงเป็น 0 credit (1hr = 1cr),เมื่อทำการสร้าง Conference ที่ระยะเวลาน้อยกว่า 1 ชม. การคำนวณ Credit ที่ได้จะต่ำกว่า 1 และจะแสดงผลในค่าของ Credit ปัดลงเป็น 0 นั่นเอง,"Login as teacher1 on mobile
+ 1. Select menu “Conference”
+ 2. Select “+create”
+ 3. กรอกข้อมูล conference
+ 4. Select ระยะเวลา Start - End ให้ต่ำกว่า 1 ชม.
+ 5. Select attending type as “Attend on time”
+ 6. Select conference type as “Book club”
+ 7. Then click “Create”",Conference ที่ต่ำกว่า 1 ชม. จะได้ credit ต่ำกว่า 1 และแสดงผลปัดลงแล้วแสดงเป็น 0 แทน แต่ค่า credit ยังคงเดิม แค่แสดงผลปัดลงเป็น 0 หรือเกิดจากการปัดเลขเครดิตที่เป็นทศนิยม,แก้ไขจำนวน credit ตรงส่วน conference นี้ให้คำนวณถูกต้อง,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+[General] ข้อมูลในหน้า Profile ไม่แสดงถ้าไม่เลือกคู่กับ Instructor/staff,เมื่อทำการเลือกให้อาจารย์เป็น Department หรือ Institute Admin แล้วไม่ได้เลือกคู่กับ Instructor/staff จะทำให้ในหน้า Profile page ไม่ขึ้น Department และ UI จะเพิ่มในส่วนแถบข้อมูลของ Student ขึ้นมาเพิ่ม,,Department หาย และขึ้นแถบข้อมูลเหมือน role student,จะสามารถเลือก Department หรือ Institute Admin ให้อาจารย์โดยที่ไม่ต้องเลือก Instructor/staff ด้วยได้และข้อมูลจะแสดงปกติ,Major,Interface,Missing,Requirements,Security,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Missing),,
+Logbook Submission Report crash on android,เมื่อกดเข้าเมนู Logbook Submission Report บนมือถือ Android ปรากฎว่า app crash และเด้งออกจาก app,"Login as student1
+ 1. Select menu “Profile”
+ 2. Select menu “Logbook Submission Report”",เด้งออกจาก app เมื่อกด logbook submission report on android,เมื่อกดเข้าเมนู Logbook Submission Report บนมือถือ Android จะไม่เด้งออกจาก app,Critical,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+Export as XLSX แล้วขึ้น “Error loading XLS! Please check your filters”,ไม่สามารถทำการ export as xlsx ได้,,เมื่อกด export as xlsx แล้วระบบขึ้นแจ้งเจือนว่า “Error loading XLS! Please check your filters”,เมื่อกด export as xlsx แล้วสามารถ export file ออกมาได้,Major,Data,Wrong,Coding,Performance,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+แก้เมนู Export เมื่อกด Preview หากพบเจอ NaN อยากให้ เป็นค่าว่างแทน,,,,,Major,Interface,Wrong,Design,Usability,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Wrong),,
+ซ่อนปุ่ม Revert to draft ในหน้า Procedure Log Details ของ Teacher,หน้า Procedure Log Details,"1. Login ด้วย Role Teacher
+ 2. ไปที่ Menu Procedure Log
+ 3. กดเข้าไปดู Log ที่ Student ส่งมา",อาจารย์สามารถกดปุ่ม Revert to draft ได้,ควรจะมีแค่ student เท่านั้นที่เห็นปุ่ม Revert to draft และกดได้,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+[General] Form Type edit failing with 'Cannot update data' error.,"เมื่อทำการกด Edit ของ Form type ที่สร้างขึ้นมาใหม่ จะไม่สามารถกด edit ได้ และจะแจ้งข้อความเตือนว่า ""Cannot update data""","Steps:
+ 1) Navigate to the Form Type page
+ 2) Click on the ""New"" button
+ 3) Enter a form type name
+ 4) Click the ""Save"" button
+ 5) Click on the ""Edit"" button for the newly created form type
+ 6) Modify the form type name
+ 7) Click the ""Save"" button
+ 8) See the ""Cannot update data"" error message","ขึ้นแสดง ""Cannot update data"" เมื่อกด edit Form type","สามารถทำการกด edit ได้และไม่ขึ้นข้อความแจ้งเตือน ""Cannot update data""",Major,Interface,Missing,Design,Usability,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Usability ในขั้นตอน Design,,
+[General] When change question type to 'multiple check' will show 'Cannot edit. You are in view/read-only mode',เมื่อทำการเลือก qtype เป็น “multiple check” ระบบจะขึ้นแสดงว่า 'Cannot edit. You are in view/read-only mode' แต่ยังสามารถแก้ไขแบบประเมินได้ตามปกติ,"Steps:
+ Navigate to the Questions tab
+ Click on 'add new question here'
+ Select 'multiple choice' as the question type
+ Enter a qcode and title
+ Attempt to change question type to 'multiple check'
+ Observe the 'Cannot edit. You are in view/read-only mode' error
+ Attempt to add new choices
+ Observe the 'Cannot edit. You are in view/read-only mode' error
+ Try changing question type and choices again.
+ Observe the 'Cannot edit. You are in view/read-only mode' error",ระบบขึ้นแจ้งเตือน 'Cannot edit. You are in view/read-only mode' ทุกครั้งที่มีการเปลี่ยนแปลงคำถามในหัวข้อ qtype = multipe check,เมื่อเลือก qtype = multiple check จะไม่มีการแจ้งเตือนขึ้นแสดงว่า 'Cannot edit. You are in view/read-only mode',Major,Interface,Missing,Design,Functionality,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Design,,
+"เคสที่เคยลงไปในช่วง 2023, 2024 ข้อมูลหายกลายเป็น Draft","เคสที่เคยลงไปในช่วง 2023, 2024 ข้อมูลหายกลายเป็น Draft",,,อาจจะต้องทำ username ของนักเรียนคนนี้ ไปเปรียบเทียบกับข้อมูลเก่าครับ,Minor,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+Institute Admin can’t see answer (loading) if evaluator select ✅ Allow requester to see all answer,หากอาจารย์ผู้ประเมินมีการเลือก Allow Allow requester to see all answer แล้วเมื่อแอดมินสถาบันหรือ Institute Admin กดเข้าไปดูแบบประเมินดังกล่าว ปรากฏว่าจะไม่เห็นคำตอบและความคิดเห็นต่างๆจะเป็นคำว่า loading,"1. Navigate to the form
+ 2. Scroll to the bottom of the form
+ 3. Uncheck the ""Allow requester to see all answers"" checkbox
+ 4. Check the ""Allow requester to see all answers"" checkbox
+ 5. Uncheck the ""Allow requester to see all answers"" checkbox again
+ 6. See the error",Institute Admin กดเข้าไปดูแบบประเมินดังกล่าว ปรากฏว่าจะไม่เห็นคำตอบและความคิดเห็นต่างๆจะเป็นคำว่า loading เมื่ออาจารย์ผู้ประเมินทำการเลือก Allow Allow requester to see all answer,ความจริงแล้วแอดมินสถาบันหรือ Institute Admin ควรเห็นคำตอบทั้งหมดหรือไม่แม้จะเลือก Allow requester to see all answer ก็ตาม,Major,Interface,Wrong,Design,Performance,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Performance ในขั้นตอน Design,,
+[General] เมื่อกด +Add Procedure ย้ำๆ แล้วปรากฏว่าได้ log เป็น draft ขึ้นมาซ้ำกันเท่ากับจำนวนที่กดปุ่ม,"1. Website มีการบันทึก draft ที่ต่างจาก mobile เมื่อกด + Add ซ้ำๆกันปรากฏว่า จะไม่มีการบันทึก draft เปล่าๆ แต่จะเปิดหน้า Procedure draft ขึ้นตามจำนวนครั้งที่กด แต่สามารถกด back เพื่อออกไปหน้าหลักได้และไม่บันทึกเป็น draft
+ 
+
+ 2. Mobile เมื่อกด + Add ซ้ำๆกันปรากฏว่า มีการเปิด Procedure Draft ขึ้นมาซ้ำตามจำนวนที่กดปุ่ม และบันทึกเคสเหล่านั้นเป็น draft ให้อัตโนมัติ ความแตกต่างของทั้งสองคือ บน website ถึงแม้จะบันทึกหรือส่ง case แรกแล้วก็จะแสดง draft ที่เหลือตามจำนวนที่กด ซึ่งจะสามารถกด back กลับไปแล้วไม่บันทึกเป็น Draft ได้, บน mobile เมื่อบันทึกหรือส่ง case แรกแล้วจะไม่แสดง draft ที่เหลือที่กดซ้ำ แต่จะไปบันทึกเป็น draft เปล่าๆในหน้า Procedure Log แทนและนักเรียนไม่รู้ตัวเลยคิดว่าเคสข้อมูลหายนั่นเองครับ",,เมื่อกด +Add Procedure ย้ำๆ แล้วปรากฏว่าได้ log เป็น draft ขึ้นมาซ้ำกันเท่ากับจำนวนที่กดปุ่ม,,Major,Interface,Missing,Design,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Missing),,
+export รายชื่ออาจารย์บนระบบ,,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+เพิ่ม column usertype ใน Model: instructor ของ Export,,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+Department ไม่แสดงในหน้า create course,,,,,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+Export Case XLSX ของ procedure และ icd9 ของ case ที่เลือกมาสอบ,,,,,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+[General] - Procedure Log ไม่ Update couse_id ใหม่หลังจากเปลี่ยน Rotation,create procedure log,"Website/Mobile [มีรูปอยู่ใน Comment]
+ 1.Log in ด้วย student
+ 2.ไปที่เมนู Procedure Log
+ 3.กดปุ่มเพิ่ม “+Add” / “+”
+ 4.เปลี่ยน Rotation ใหม่
+ 5.ลงข้อมูลทั้งหมด
+ 6.กด Send Log","หลังจากลงข้อมูลเสร็จแล้วจะพบว่า course_id ไม่ใช่ของ course ที่ผูกอยู่กับ rotation ที่เลือกไป
+ - [Mobile] - course_id ที่อยู่ใน procedure log เป็นของ rotation อันก่อนหน้านี้ที่จะเปลี่ยนใหม่
+ - [Web] - course_id ที่อยู่ใน procedure log เป็นของ rotation อันแรกที่อยู่ในช่อง Select Rotation",couse_id ควรจะเปลี่ยนใหม่ไปตาม rotation ที่ user เลือกด้วย,Minor,Interface,Wrong,Design,Functionality,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Functionality ในขั้นตอน Design,,
+กด Submit EPA16 Cancer pain/neuropathic pain แล้วคำตอบบางหัวข้อหายไป,"เมื่อตอบแบบประเมินไปแล้วกด submit คำตอบบางคำตอบหายไปครับ (ผมลองทั้ง mobile & website ด้วยครับ)
+ 
+
+ qcode ของช่องคะแนนรวมไม่มี",,เมื่อตอบแบบประเมินไปแล้วกด submit คำตอบบางคำตอบหายไปครับ,เมื่อเลือกคำตอบแล้วกด submit แบบประเมิน คำตอบจะยังอยู่ไม่หายไป,Minor,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+เพิ่ม Tags ของ Symptom และ Diagnosis ที่เพิ่มเข้ามาใหม่ของ Patient Care (02/06/2025) “Obstetrics & Gynecology”,Symptom (อาการนำ) และ Diagnosis (โรค/ภาวะ) ที่ได้ทำการ Add เข้าไปใหม่ใน Patient Care ยังไม่อยู่ใน Tags ค้นหาของ “Obstetrics & Gynecology”,"Login as Student
+ 1. Select menu “Patient Care”
+ 2. Press + or Add Patient Care
+ 3. Choose “อาการนำ” or “โรค/ภาวะ” in Patient Care Detail
+ 4. Choose Tags “Obstetrics & Gynecology”",Symptom (อาการนำ) และ Diagnosis (โรค/ภาวะ) ที่ได้ทำการ Add เข้าไปใหม่ใน Patient Care ยังไม่อยู่ใน Tags ค้นหาของ “Obstetrics & Gynecology”,,Minor,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+กด Select Form ในหน้า Form แล้วแอป crash,กด Select Form ในหน้า Form แล้วแอป crash,"กด Select Form จากทางเข้า 3 แบบ
+ 1. Procedure > Form > กด select form > crash💥 
+ 2. Patient care > Form > กดselect form > crash 💥
+ 3. Form > กด select form > crash 💥",,,Critical,Logic,Wrong,Coding,Performance,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Logic (Wrong),,
+จำนวน Report Procedure ใน Export กับ Superset ไม่ตรงกัน,ข้อมูลจำนวน report ของ export กับ superset ไม่ตรงกัน,,,ข้อมูลจำนวน report ของ export กับ superset ตรงกัน,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+ข้อมูล Superset ไม่ตรงกับ Export,ข้อมูล นับจำนวน procedure ใน superset ไม่ตรงกับ export,,,ข้อมูล นับจำนวน procedure ใน superset ตรงกันกับ export,Major,Data,Wrong,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,
+add filter field in export feature,ไม่มี field place_of_procedure บน export procedure/logbook,,,,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+Teacher สามารถกด Submit แบบประเมินได้ แม้จะยังไม่ได้ตอบคำถามที่ require ซึ่งคำถามนั้นเคยผ่านการกดตอบและกดยกเลิกคำตอบมาแล้วก็ตาม,"พบช่องโหว่ของระบบในหน้าการทำแบบประเมิน โดยระบบอนุญาตให้ผู้ใช้ส่งแบบประเมินได้สำเร็จ แม้ว่าจะมีข้อคำถามที่เป็น Required Field ว่างอยู่
+ 
+
+ Root Cause Analysis (เบื้องต้น): คาดว่า Logic การตรวจสอบค่าว่างทำงานผิดพลาดหลังจากมีการ ""เลือกตอบ"" แล้ว ""ยกเลิกคำตอบ"" (Undo/Clear Selection) ทำให้ Flag ของคำถามนั้นยังค้างสถานะว่าเป็น ""Answered"" อยู่ใน Cache หรือ State ของ Form ทั้งที่ Value จริงๆ กลับไปเป็น Null/Empty แล้ว
+ 
+
+ ปัญหาเจอที่ anestlog แต่คาดว่าเป็นทุก production","1 เข้าไปทำแบบประเมินใน Rotation ที่กำหนด
+ 2 ยกเลิกคำตอบ ในข้อนั้นออก เพื่อให้กลับเป็นค่าว่าง
+ 3 กดปุ่ม Submit ของแบบประเมิน
+ 4 ระบบยอมให้ Submit ผ่านได้สำเร็จ ทั้งที่ข้อนั้นเป็นค่าว่างและเป็นข้อที่บังคับตอบ",ระบบยอมให้ Submit ผ่านได้สำเร็จ และบันทึกข้อมูลเข้าฐานข้อมูลทั้งที่ข้อบังคับนั้นไม่มีข้อมูล (Empty String/Null),ระบบ ต้องไม่อนุญาต ให้ Submit ได้หากยังมีข้อ Required ที่เป็นค่าว่างระบบควรแสดง Error Message หรือ มี Validation Alert เพื่อให้ผู้ใช้กลับไปแก้ไขให้ครบถ้วน,Critical,Interface,Missing,Design,Performance,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Performance ในขั้นตอน Design,,
+Unauthorized Approval via Notification Inbox by Former Evaluator (Instructor + Admin Role),"พบปัญหาด้านการควบคุมสิทธิ์ (Access Control) โดยระบบอนุญาตให้ Evaluator ท่านเดิม (คนที่ 1) ที่มี Role เป็น Instructor + Admin สามารถกด Approve รายการ Procedure Log ได้ผ่านทาง Notification Inbox ทั้งที่รายการนั้นถูก Revert to draft และเปลี่ยนตัว Evaluator ไปเป็นท่านอื่นแล้ว
+ 
+
+ จุดสังเกตสำคัญ (QA Analysis):
+ ปัญหานี้อาจเกิดจากระบบตรวจสอบสิทธิ์ผิดพลาด โดยเมื่อ User มีพ่วงตำแหน่ง Admin ทำให้ระบบอนุญาตให้ทำ Action ได้ทุกที่ (Bypass Check) โดยไม่ได้ตรวจสอบว่าใน Log นั้นๆ User ท่านนี้ยังอยู่ในสถานะ ""Current Evaluator"" หรือไม่ หลังจากที่มีการ Revert และเปลี่ยนชื่อผู้ประเมินไปแล้ว","1. Student: สร้าง Procedure Log และส่งให้ Evaluator A (Role: Instructor + Admin)
+ 2. Evaluator A: ได้รับ Notification ใน Inbox และกดเข้าไปดูข้อมูลได้ตามปกติ (สถานะ Log: Submitted)
+ 3. Evaluator A: กดปุ่ม Approve รายการดังกล่าว
+ 4. Student: กดปุ่ม Revert to draft เพื่อดึง Log กลับมาแก้ไข (สถานะ Log: Draft)
+ 5. Student: ทำการ เปลี่ยนตัว Evaluator จากเดิม (Evaluator A) เป็น Evaluator B และส่ง Log อีกครั้ง
+ 6. Evaluator A (Instructor + Admin): กลับไปที่ Inbox Notification ของตนเอง (ซึ่งรายการ Noti เดิมในข้อ 2 ยังไม่ถูกลบออก)
+ 7. Evaluator A: กดที่ Notification เดิมนั้นเพื่อเข้าสู่หน้า Detail และทำการกด Approve","Evaluator A (ที่เป็น Instructor + Admin) สามารถกด Approve ผ่าน Notification ได้สำเร็จ แม้ว่าปัจจุบันผู้ประเมินที่ถูกระบุใน Log จะเปลี่ยนเป็น Evaluator B แล้วก็ตาม
+ 
+
+ หมายเหตุ: หากเป็น Role Instructor ทั่วไป (ไม่มี Admin พ่วง) อาจจะไม่พบปัญหานี้ (ต้องตรวจสอบเพิ่มเติม)","Authorization Check: ระบบต้องตรวจสอบว่า User ที่กำลังทำการ Approve คือ ""Current Evaluator"" ที่ถูกระบุใน Log ปัจจุบันเท่านั้น
+ 
+
+ Role Restrict: แม้จะมีสิทธิ์ Admin แต่ในบริบทของการประเมิน (Evaluation Flow) ไม่ควรอนุญาตให้กด Approve รายการที่ตนเองไม่ได้เป็นผู้รับผิดชอบผ่านทาง Notification เก่า
+ 
+
+ Notification Update: เมื่อมีการ Revert to draft หรือเปลี่ยน Evaluator, ระบบควร Clear หรือ Revoke Notification ของ Evaluator ท่านเดิมออกเพื่อป้องกันการสับสน",Major,Interface,Missing,Requirements,Security,จำแนกเป็น Interface/Missing เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+"Criteria ในเมนู Score บนแอป แสดงผลเป็น ""0""","พบปัญหาการแสดงผลข้อมูลไม่ถูกต้องใน เมนู Score บน Mobile Application โดยค่า Criteria แสดงผลเป็น ""0"" ตลอดเวลา ซึ่งไม่สอดคล้องกับข้อมูลบน Web ที่แสดงผลค่าได้ถูกต้องตามเงื่อนไขที่ตั้งไว้","1. เข้าสู่ระบบผ่านหน้าเว็บ ไปที่เมนู Score
+ 2. กดปุ่ม ""New"" เพื่อสร้าง Preset สำหรับ Export Score
+ • ระบุค่า Criteria > 0 (เช่น ตั้งค่าเป็น 50 หรือ 100)
+ • ระบุข้อมูล Required อื่นๆ ให้ครบถ้วน
+ 3. ทำการ Upload Score เข้าไปใน Preset นั้น และกด Publis 
+ 4. ตรวจสอบว่าหน้าเว็บแสดงค่า Criteria ได้ถูกต้อง (ตามที่ตั้งไว้ในข้อ 2)
+ 5. Login เข้าใช้งานแอปพลิเคชันด้วย Account เดียวกัน โดยเข้าไปที่เมนู Score และตรวจสอบ Preset ที่เพิ่งสร้าง","ข้อมูล Criteria บน Mobile Application แสดงค่าเป็น ""0"" เสมอ ทั้งที่บน Web แสดงค่าปกติ",ข้อมูล Criteria บน Mobile Application ต้องแสดงผลตรงตามที่ตั้งค่าไว้บน Web (สอดคล้องกัน),Major,Interface,Wrong,Requirements,Security,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Security ในขั้นตอน Requirements,,
+"เปลี่ยน default function จาก ""Group By” เป็น ""Value/Filter” ในเมนู Export","ในเมนู Export พบว่าระบบตั้งค่า Default Function เป็น ""Group By"" ซึ่งทำให้การแสดงผลข้อมูลไม่ถูกต้อง เนื่องจากข้อมูลที่มีค่าซ้ำกันจะถูกรวบ (Aggregated) ให้แสดงผลเพียงบรรทัดเดียว ทำให้ผู้ใช้งานเข้าใจผิดว่านิสิตบันทึกข้อมูลเพียงครั้งเดียว ทั้งที่ในความเป็นจริงมีการบันทึกหลายครั้ง","1.Log in เข้าสู่ระบบ MDCUXP ด้วยสิทธิ์อาจารย์ หรือ Admin
+ 2.ไปที่เมนู Export
+ 3.สังเกตที่หน้าจอ Export: ระบบจะตั้งค่า Function เป็น ""Group By""
+ 4.กดปุ่ม Export และเปิดไฟล์ที่ได้รับ
+ >>> ไฟล์ข้อมูลที่ได้รับ ถูกรวบเหลือบรรทัดเดียว ไม่เห็นรายละเอียดแยกตามครั้งที่บันทึก
+ 5.กลับมาที่หน้าเดิม เปลี่ยน Function เป็น ""Value/Filter""
+ 6.กดปุ่ม Export อีกครั้ง
+ >>> ไฟล์ข้อมูลที่ได้รับ แสดงผลแยกบรรทัดถูกต้องตามจำนวนที่บันทึกจริง",,"หน้า Export ระบบควรตั้งค่า Default Function เป็น ""Value/Filter"" เพื่อให้แสดงข้อมูลทั้งหมดเป็นค่าเริ่มต้นการแสดงผลในไฟล์ Export ต้องแสดงครบทุก Record ที่นิสิตบันทึกไว้ โดยไม่มีการรวบบรรทัด เว้นแต่ผู้ใช้จะเลือกเปลี่ยนเป็น ""Group By"" ด้วยตนเอง",Major,Interface,Missing,Requirements,Security,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Missing),,
+รูปภาพใน Patient Care ไม่ซิงค์ข้ามแพลตฟอร์ม (Desktop vs Mobile),รูปภาพที่บันทึกใน Patient Care เมื่อเปิดข้าม Patchform จะไม่แสดงรูปภาพที่บันทึกไว้,"Case A (Desktop -> Mobile):
+ • ล็อกอินเวอร์ชัน Desktop และอัปโหลดรูปภาพในเมนู Patient Care
+ • Send Log เพื่อบันทึกข้อมูล
+ • เปิดแอปบน iOS หรือ Android แล้วเข้าไป Patient Care เดิมเดียวกัน
+ • Observation: ไม่พบรูปภาพที่อัปโหลดไว้
+ 
+
+ Case B (Mobile -> Desktop):
+ • ล็อกอินผ่าน App (iOS/Android) และอัปโหลดรูภาพปใน Patient Care
+ • เปิดบน Desktop แล้วเข้าไปดู Patient Care เดิมเดียวกัน
+ • Observation: รูปภาพที่อัปโหลดไว้บน Desktop",,รูปจะต้องเปิดแสดงขึ้นได้ทุก Patchform,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+เพิ่มคอลัมน์ evaluator_firstname และ evaluator_lastname ในเมนู Export สำหรับ Base Model: Patient Care Diagnosis,ไม่มี fields evaluator_firstname และ evaluator_lastname ให้เลือก เลยไม่สามารถดู report ว่า log อาจารย์ท่านใดเป็นผู้ประเมิน,Admin >> Export >> เลือก Preset >> เลือก Base Model Patient Care Diagnosis,,Available fields มี evaluator_firstname และ evaluator_lastname ให้เลือก,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+ข้อมูล Research ของแพทย์ไม่แสดงผลในหน้า Admin,ข้อมูลของคุณหมอ ไม่แสดงที่หน้าของ Admin,,,ข้อมูลที่ไม่แสดง ให้กลับมาแสดงอย่างถูกต้องที่หน้า Admin,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+หัวกระดาษของ Student Portfolio หาย,,รูปข้างล่าง,,,Minor,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+ปรับคำ UI ในเมนู Form บนเว็บให้เหมาะสมกับการใช้งาน,"1 Create Form แก้ไขให้เป็น Add Form
+ 2 Edit Form แก้ไขให้เป็น Add My Form","1 Instructor >> My Form
+ 2 Instructor >> My Form >> Create Form","แก้ไขให้เป็น Add Form
+แก้ไขให้เป็น Add My Form",,Minor,Interface,Wrong,Design,Usability,จำแนกเป็น Interface/Wrong เนื่องจากพบปัญหาที่กระทบต่อ Usability ในขั้นตอน Design,,
+Bug: course ไม่แสดงใน drop-down หน้า create rotation,,,,,Major,Data,Missing,Coding,Functionality,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Missing),,
+แอป Crash ทันทีเมื่อกดปุ่ม Logbook submission report (เฉพาะ Android),,"1 เข้า Profile
+ 2 กดปุ่ม Logbook submission report",,,Critical,Interface,Wrong,Design,Performance,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Interface (Wrong),,
+Pivot can’t Export as XLSX (Error loading XLS! Please check your filters),ไม่สามารถทำการ Export Pivot as XLSX ได้,,ทำการ Export as XLSX แล้วขึ้นแจ้งเตือน Error loading XLS! Please check your filters,สามารถ Export as XLSX ได้,Major,Data,Wrong,Coding,Performance,วิเคราะห์จากบริบทของปัญหา พบว่าเป็นข้อบกพร่องด้าน Data (Wrong),,

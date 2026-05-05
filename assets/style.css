@@ -1,0 +1,108 @@
+/* Energetic B2B SaaS Theme */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --sky-blue: #90caf9;
+    --sky-blue-hover: #bbdefb;
+    --ocean-green: #81c784;
+    --ocean-green-hover: #43a047;
+    
+    /* Light Mode Default Neutrals */
+    --bg-color: #F8FAFC;
+    --surface-color: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --border-color: #E2E8F0;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode Neutrals */
+        --bg-color: #F8FAFC;
+        --surface-color: #FFFFFF;
+        --text-primary: #0F172A;
+        --text-secondary: #475569;
+        --border-color: #E2E8F0;
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+        --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+    }
+}
+
+/* Global Font Application */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Hide Streamlit Branding & Menus */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Reduce Top Padding */
+.block-container {
+    padding-top: 2rem !important;
+}
+
+/* Ensure text headers match the theme dynamically */
+h1, h2, h3, h4, h5, h6, p, li {
+    color: var(--text-primary);
+}
+
+/* Streamlit Button Styling (Secondary / Standard) */
+.stButton>button {
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-sm);
+}
+.stButton>button:hover {
+    border-color: var(--accent-mint) !important;
+    color: var(--accent-mint) !important;
+    background-color: var(--surface-color);
+    box-shadow: 0 4px 12px rgba(152, 151, 171, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Primary Button Styling */
+.stButton>button[kind="primary"] {
+    background-color: var(--sky-blue) !important; 
+    color: #ffffff !important;
+    border: none;
+}
+.stButton>button[kind="primary"]:hover {
+    background-color: var(--sky-blue-hover) !important; 
+    box-shadow: 0 4px 12px rgba(152, 151, 171, 0.4) !important;
+    color: #ffffff !important;
+}
+
+/* Metric/Card Styling refinements */
+div[data-testid="stMetricValue"] {
+    color: var(--accent-mint) !important;
+    font-weight: 700;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: var(--text-secondary) !important;
+}
+
+/* Clean up alert boxes (success, error, info, warning) */
+div[data-testid="stAlert"] {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Custom DataFrame Headers */
+th {
+    background-color: var(--surface-color) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid var(--sky-blue) !important;
+}
